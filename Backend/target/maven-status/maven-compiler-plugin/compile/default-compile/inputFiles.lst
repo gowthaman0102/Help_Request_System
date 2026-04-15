@@ -1,0 +1,15 @@
+C:\Help_1\Backend\src\main\java\com\crowdhelp\backend\dao\RequestDAO.java
+C:\Help_1\Backend\src\main\java\com\crowdhelp\backend\model\Response.java
+C:\Help_1\Backend\src\main\java\com\crowdhelp\backend\dao\UserDAO.java
+C:\Help_1\Backend\src\main\java\com\crowdhelp\backend\dao\ResponseDAO.java
+C:\Help_1\Backend\src\main\java\com\crowdhelp\backend\model\HelpRequest.java
+C:\Help_1\Backend\src\main\java\com\crowdhelp\backend\model\Rating.java
+C:\Help_1\Backend\src\main\java\com\crowdhelp\backend\model\Message.java
+C:\Help_1\Backend\src\main\java\com\crowdhelp\backend\dao\MessageDAO.java
+C:\Help_1\Backend\src\main\java\com\crowdhelp\backend\util\SessionManager.java
+C:\Help_1\Backend\src\main\java\com\crowdhelp\backend\dao\RatingDAO.java
+C:\Help_1\Backend\src\main\java\com\crowdhelp\backend\util\SampleDataSeeder.java
+C:\Help_1\Backend\src\main\java\com\crowdhelp\backend\service\AuthService.java
+C:\Help_1\Backend\src\main\java\com\crowdhelp\backend\model\User.java
+C:\Help_1\Backend\src\main\java\com\crowdhelp\backend\service\MatchingService.java
+C:\Help_1\Backend\src\main\java\com\crowdhelp\database\DatabaseConnection.java

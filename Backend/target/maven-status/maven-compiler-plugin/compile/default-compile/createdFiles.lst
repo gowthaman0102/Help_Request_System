@@ -1,0 +1,16 @@
+com\crowdhelp\backend\model\Message.class
+com\crowdhelp\backend\model\HelpRequest.class
+com\crowdhelp\backend\model\User.class
+com\crowdhelp\backend\service\MatchingService.class
+com\crowdhelp\database\DatabaseConnection.class
+com\crowdhelp\backend\service\MatchingService$HelperScore.class
+com\crowdhelp\backend\model\Rating.class
+com\crowdhelp\backend\dao\RatingDAO.class
+com\crowdhelp\backend\service\AuthService.class
+com\crowdhelp\backend\util\SampleDataSeeder.class
+com\crowdhelp\backend\util\SessionManager.class
+com\crowdhelp\backend\dao\MessageDAO.class
+com\crowdhelp\backend\dao\ResponseDAO.class
+com\crowdhelp\backend\dao\UserDAO.class
+com\crowdhelp\backend\model\Response.class
+com\crowdhelp\backend\dao\RequestDAO.class
