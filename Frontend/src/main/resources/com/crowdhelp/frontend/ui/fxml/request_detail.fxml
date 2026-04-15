@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.crowdhelp.frontend.ui.controller.RequestDetailController"
+      VBox.vgrow="ALWAYS">
+    <HBox styleClass="page-header" alignment="CENTER_LEFT">
+        <Label text="Request Details" styleClass="page-title"/>
+    </HBox>
+    <ScrollPane fx:id="scrollPane" fitToWidth="true" VBox.vgrow="ALWAYS">
+        <VBox fx:id="mainContainer"/>
+    </ScrollPane>
+</VBox>
+

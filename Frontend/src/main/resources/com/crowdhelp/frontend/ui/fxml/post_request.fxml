@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.crowdhelp.frontend.ui.controller.PostRequestController"
+      VBox.vgrow="ALWAYS">
+
+    <!-- Header -->
+    <HBox styleClass="page-header" alignment="CENTER_LEFT">
+        <Label text="Post a Help Request" styleClass="page-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label text="âœï¸" style="-fx-font-size: 24px;"/>
+    </HBox>
+
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+        <VBox spacing="24" style="-fx-padding: 30 40; -fx-background-color: #F4F7FE;" maxWidth="800">
+
+            <Label fx:id="messageLabel" text="" wrapText="true" visible="false" managed="false"/>
+
+            <!-- Row 1: Type + Urgency -->
+            <HBox spacing="20">
+                <VBox spacing="8" HBox.hgrow="ALWAYS">
+                    <Label text="HELP TYPE" styleClass="form-label"/>
+                    <ComboBox fx:id="typeCombo" promptText="Select category..."
+                              styleClass="form-combo" maxWidth="Infinity"/>
+                </VBox>
+                <VBox spacing="8" HBox.hgrow="ALWAYS">
+                    <Label text="URGENCY LEVEL" styleClass="form-label"/>
+                    <ComboBox fx:id="urgencyCombo" promptText="Select urgency..."
+                              styleClass="form-combo" maxWidth="Infinity"/>
+                </VBox>
+            </HBox>
+
+            <!-- Description -->
+            <VBox spacing="8">
+                <Label text="DESCRIPTION" styleClass="form-label"/>
+                <TextArea fx:id="descArea" promptText="Describe your help request in detail..."
+                          styleClass="form-field" minHeight="120" maxWidth="Infinity" wrapText="true"/>
+            </VBox>
+
+            <!-- Row 2: Location + Skills -->
+            <HBox spacing="20">
+                <VBox spacing="8" HBox.hgrow="ALWAYS">
+                    <Label text="LOCATION" styleClass="form-label"/>
+                    <TextField fx:id="locationField" promptText="e.g. Chennai, Anna Nagar"
+                               styleClass="form-field" maxWidth="Infinity"/>
+                </VBox>
+                <VBox spacing="8" HBox.hgrow="ALWAYS">
+                    <Label text="REQUIRED SKILLS (comma-separated)" styleClass="form-label"/>
+                    <TextField fx:id="skillsField" promptText="e.g. Blood Donation, First Aid"
+                               styleClass="form-field" maxWidth="Infinity"/>
+                </VBox>
+            </HBox>
+
+            <!-- Date & Time -->
+            <VBox spacing="8">
+                <Label text="DATE &amp; TIME NEEDED" styleClass="form-label"/>
+                <TextField fx:id="dateTimeField" promptText="YYYY-MM-DD HH:MM"
+                           styleClass="form-field" maxWidth="360"/>
+            </VBox>
+
+            <VBox spacing="6" style="-fx-background-color: rgba(67,24,255,0.06); -fx-border-color: rgba(67,24,255,0.2); -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 14;">
+                <Label text="ðŸ’¡ Tips for a great request:" style="-fx-text-fill: #4318FF; -fx-font-weight: bold; -fx-font-size: 12px;"/>
+                <Label text="â€¢ Be specific about what you need and when" style="-fx-text-fill: #707EAE; -fx-font-size: 12px;"/>
+                <Label text="â€¢ Mention the exact location so helpers can find you" style="-fx-text-fill: #707EAE; -fx-font-size: 12px;"/>
+                <Label text="â€¢ List required skills to get the most relevant helpers" style="-fx-text-fill: #707EAE; -fx-font-size: 12px;"/>
+            </VBox>
+
+
+            <!-- Submit Button -->
+            <HBox>
+                <Button fx:id="submitBtn" text="ðŸš€  Post Request" styleClass="btn-primary"
+                        onAction="#handleSubmit" style="-fx-padding: 13 32; -fx-font-size: 14px;"/>
+            </HBox>
+        </VBox>
+    </ScrollPane>
+</VBox>
+

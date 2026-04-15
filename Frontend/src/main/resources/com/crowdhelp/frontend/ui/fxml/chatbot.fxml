@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.crowdhelp.frontend.ui.controller.ChatbotController"
+      style="-fx-background-color: #FFFFFF; -fx-border-color: #E2E8F0; -fx-border-width: 1; -fx-border-radius: 12; -fx-background-radius: 12;"
+      spacing="0" VBox.vgrow="ALWAYS">
+
+    <!-- Header -->
+    <HBox style="-fx-background-color: linear-gradient(to right, #6C63FF, #8B7DFF); -fx-background-radius: 12 12 0 0; -fx-padding: 12 16;" alignment="CENTER_LEFT">
+        <Label text="ðŸ¤– CrowdHelp Assistant" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"/>
+    </HBox>
+
+    <!-- Chat Area -->
+    <ScrollPane fx:id="scrollPane" fitToWidth="true" VBox.vgrow="ALWAYS"
+                styleClass="chat-scroll-pane" style="-fx-background-color: transparent; -fx-padding: 0;">
+        <VBox fx:id="chatContainer" spacing="10" style="-fx-padding: 14; -fx-background-color: #FFFFFF;"/>
+    </ScrollPane>
+
+    <!-- Input Area -->
+    <HBox spacing="8" style="-fx-padding: 12; -fx-background-color: #F4F7FE; -fx-border-color: #E2E8F0; -fx-border-width: 1 0 0 0; -fx-background-radius: 0 0 12 12;">
+        <TextField fx:id="inputField" promptText="Ask about features..." HBox.hgrow="ALWAYS"
+                   style="-fx-background-color: #E2E8F0; -fx-text-fill: #2B3674; -fx-prompt-text-fill: #A3AED0; -fx-background-radius: 20; -fx-padding: 8 14;"
+                   onAction="#handleSend"/>
+        <Button text="âž¤" onAction="#handleSend"
+                style="-fx-background-color: #6C63FF; -fx-text-fill: white; -fx-background-radius: 20; -fx-min-width: 36; -fx-min-height: 36; -fx-cursor: hand;"/>
+    </HBox>
+
+</VBox>
+

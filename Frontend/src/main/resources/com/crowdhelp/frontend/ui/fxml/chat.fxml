@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.crowdhelp.frontend.ui.controller.ChatController"
+      minWidth="800" minHeight="600">
+
+    <!-- Chat Header -->
+    <HBox styleClass="chat-header" alignment="CENTER_LEFT" spacing="14">
+        <Button text="â†" onAction="#handleBack"
+                style="-fx-background-color: transparent; -fx-text-fill: #888DA0; -fx-font-size: 18px; -fx-cursor: hand; -fx-padding: 0 6;"/>
+        <VBox spacing="2">
+            <Label fx:id="chatHeaderTitle" text="Chat" styleClass="page-title" style="-fx-font-size: 18px;"/>
+            <Label fx:id="chatHeaderSub" text="" styleClass="meta-text" style="-fx-font-size: 11px;"/>
+        </VBox>
+    </HBox>
+
+    <!-- Messages Area -->
+    <ScrollPane fx:id="chatScrollPane" fitToWidth="true" VBox.vgrow="ALWAYS"
+                style="-fx-background-color: #F4F7FE; -fx-background: #F4F7FE;">
+        <VBox fx:id="messagesContainer" spacing="2" style="-fx-padding: 12 0; -fx-background-color: #F4F7FE;"/>
+    </ScrollPane>
+
+    <!-- Input Area -->
+    <HBox styleClass="chat-input-area" spacing="10" alignment="CENTER">
+        <TextField fx:id="messageInput" promptText="Type a message..."
+                   styleClass="chat-input" HBox.hgrow="ALWAYS"
+                   onAction="#handleSend"/>
+        <Button fx:id="sendBtn" text="âž¤" styleClass="send-btn" onAction="#handleSend"/>
+    </HBox>
+</VBox>
+

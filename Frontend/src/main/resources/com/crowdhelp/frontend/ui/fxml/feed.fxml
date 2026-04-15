@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.crowdhelp.frontend.ui.controller.FeedController"
+      VBox.vgrow="ALWAYS">
+
+    <!-- Header -->
+    <HBox styleClass="page-header" alignment="CENTER_LEFT" spacing="16">
+        <Label text="Social Feed" styleClass="page-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="countLabel" text="Loading..." styleClass="meta-text"/>
+    </HBox>
+
+    <!-- Filter Bar -->
+    <HBox fx:id="filterBar"/>
+
+    <!-- Feed List -->
+    <ScrollPane fx:id="scrollPane" fitToWidth="true" VBox.vgrow="ALWAYS">
+        <VBox fx:id="feedContainer"/>
+    </ScrollPane>
+</VBox>
+

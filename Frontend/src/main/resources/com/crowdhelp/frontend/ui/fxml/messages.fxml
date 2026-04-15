@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.crowdhelp.frontend.ui.controller.MessagesController"
+      VBox.vgrow="ALWAYS">
+    <HBox styleClass="page-header" alignment="CENTER_LEFT" spacing="16">
+        <Label text="Messages" styleClass="page-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="headerSub" text="" styleClass="meta-text"/>
+    </HBox>
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+        <VBox fx:id="conversationsContainer"/>
+    </ScrollPane>
+</VBox>
+

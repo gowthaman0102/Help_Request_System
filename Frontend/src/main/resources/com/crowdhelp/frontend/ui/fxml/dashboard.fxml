@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.crowdhelp.frontend.ui.controller.DashboardController"
+           minWidth="1100" minHeight="720">
+    <BorderPane>
+
+    <!-- LEFT SIDEBAR -->
+    <left>
+        <VBox styleClass="sidebar" spacing="0" prefWidth="230">
+            <!-- Logo Area -->
+            <VBox spacing="4" style="-fx-padding: 24 20 20 20;">
+                <Label text="ðŸ¤ CrowdHelp" styleClass="sidebar-logo"/>
+                <Label text="Community Help Platform" styleClass="sidebar-logo-sub"/>
+            </VBox>
+
+            <!-- User Avatar Section -->
+            <VBox spacing="8" style="-fx-padding: 16 20; -fx-background-color: rgba(108,99,255,0.08);">
+                <HBox spacing="12" alignment="CENTER_LEFT">
+                    <StackPane>
+                        <VBox fx:id="avatarBox" styleClass="avatar-circle" alignment="CENTER"
+                              minWidth="40" maxWidth="40" minHeight="40" maxHeight="40"/>
+                        <Label fx:id="avatarLabel" styleClass="avatar-text"/>
+                    </StackPane>
+                    <VBox spacing="2">
+                        <Label fx:id="userNameLabel" styleClass="sidebar-user-name" text="User"/>
+                        <Label fx:id="userEmailLabel" styleClass="sidebar-user-email" text="user@email.com"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <Region style="-fx-min-height: 8px;"/>
+
+            <!-- Navigation Buttons -->
+            <VBox spacing="4" style="-fx-padding: 0 16;">
+                <Button fx:id="navFeed" text="ðŸ    Social Feed" styleClass="nav-btn, nav-btn-active"
+                        maxWidth="Infinity" onAction="#showFeed"/>
+                <Button fx:id="navPost" text="âœï¸   Post Request" styleClass="nav-btn"
+                        maxWidth="Infinity" onAction="#showPostRequest"/>
+                <Button fx:id="navMyReq" text="ðŸ“‹   My Requests" styleClass="nav-btn"
+                        maxWidth="Infinity" onAction="#showMyRequests"/>
+                <Button fx:id="navChat" text="ðŸ’¬   Messages" styleClass="nav-btn"
+                        maxWidth="Infinity" onAction="#showMessages"/>
+                <Button fx:id="navProfile" text="ðŸ‘¤   Profile" styleClass="nav-btn"
+                        maxWidth="Infinity" onAction="#showProfile"/>
+            </VBox>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <!-- Stats at bottom of sidebar -->
+            <VBox spacing="6" style="-fx-padding: 12 20; -fx-background-color: rgba(67, 24, 255, 0.05);">
+                <Label fx:id="sidebarStats" text="Loading..." styleClass="meta-text"/>
+            </VBox>
+
+            <!-- Logout -->
+            <VBox style="-fx-padding: 12 16 20 16;">
+                <Button text="â»   Logout" styleClass="logout-btn" maxWidth="Infinity" onAction="#handleLogout"/>
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- MAIN CONTENT AREA -->
+    <center>
+        <StackPane fx:id="contentPane" styleClass="content-area"/>
+    </center>
+    </BorderPane>
+
+    <!-- Chatbot Window -->
+    <VBox fx:id="chatbotWindow" visible="false" maxWidth="350" maxHeight="450"
+          StackPane.alignment="BOTTOM_RIGHT">
+        <fx:include source="chatbot.fxml"/>
+        <StackPane.margin>
+            <Insets bottom="90" right="30"/>
+        </StackPane.margin>
+    </VBox>
+
+    <!-- Floating Chatbot Button -->
+    <Button fx:id="chatbotBtn" text="ðŸ’¬ Help" styleClass="chatbot-fab" 
+            StackPane.alignment="BOTTOM_RIGHT" onAction="#toggleChatbot"
+            style="-fx-background-color: #6C63FF; -fx-text-fill: white; -fx-background-radius: 30; -fx-min-width: 60; -fx-min-height: 60; -fx-font-weight: bold; -fx-font-size: 14px; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);">
+        <StackPane.margin>
+            <Insets bottom="20" right="30"/>
+        </StackPane.margin>
+    </Button>
+</StackPane>
+
